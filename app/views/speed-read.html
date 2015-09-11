@@ -1,0 +1,37 @@
+<div class="speed-box">
+  <div class="speed-read" ng-bind-html="spritzWord">
+  </div>
+</div>
+<div class="row">
+  <div class="col s4">
+    <input-field>
+      <i class="material-icons prefix">access_time</i>
+      <input ng-model="wpm" ng-change="changeWpm()" type="number" step="20" class="validate">
+      <label for="icon_telephone">W P M</label>
+    </input-field>
+  </div>
+  <div class="col m1 s3">
+    <button ng-click="[words_set(),  word_show(0),  word_update()]" class="btn deep-orange">init</button>
+  </div>
+  <div class="col m1 s3">
+    <button ng-click="spritzChange();" class="btn purple">
+      <i class="material-icons">loop</i>
+    </button>
+  </div>
+  <div class="col m1 s3">
+    <button ng-click="spritz_pause();" class="btn blue">
+      <i class="material-icons">pause</i>
+    </button>
+  </div>
+  <div class="col m1 s3">
+    <button ng-click="spritz_play();" class="btn blue">
+      <i class="material-icons">play_arrow</i>
+    </button>
+  </div>
+  <div class="col m1 s4">
+    <button ng-click="spritz_flip();" class="btn blue">Toggle Play</button>
+  </div>
+  <div class="col m12 s12">
+    <textarea class="materialize-textarea" ng-model="readThis"></textarea>
+  </div>
+</div>
